@@ -2,23 +2,22 @@ const data = {
   products: [
     {
       _id: "1",
-      name: "Standard Home  stool",
-      category: "furniture",
+      name: "Electric Industrial Steam Iron",
+      category: "electronics",
       image:
-        "https://images.pexels.com/photos/4846430/pexels-photo-4846430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      price: "118,400",
-      slashed: "148,000",
-      description:
-        "Sold as peice wooden upholstered ottoman lends a laid-back appeal to your indoor space. Comes with extra padding for comfort and support .",
+        "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/L/V/118105_1580898149.jpg",
+      price: "218,400",
+      slashed: "448,000",
+      description: " high-grade raw material and advanced technology",
     },
     {
       _id: "2",
-      name: "Home comfort couch ",
+      name: "Recording Microphone Kit ",
       category: "furniture",
       image:
-        "https://images.pexels.com/photos/6436741/pexels-photo-6436741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      price: "150,000",
-      slashed: "165,000",
+        "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/B/U/71689_1607187284.jpg",
+      price: "175,300",
+      slashed: "185,950",
       description: "comfortable couch good for your living room",
     },
   ],

@@ -2,13 +2,14 @@ import React from "react";
 import Electronics from "../electronics/Electronics";
 import Furniture from "../furniture/Furniture";
 import FreshFood from "../freshFood/FreshFood";
-const AllCategories = () => {
+const AllCategories = (props) => {
+  const { onAdd } = props;
   return (
     <div>
       <h3>all..</h3>
-      <Electronics />
-      <Furniture />
-      <FreshFood />
+      <Electronics onAdd={onAdd} />
+      <Furniture onAdd={onAdd} />
+      <FreshFood onAdd={onAdd} />
     </div>
   );
 };

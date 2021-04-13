@@ -4,22 +4,11 @@ import Footer from "../footer/Footer";
 import "../Screen/ProductDetails.css";
 import RelatedProducts from "../RelatedProducts/RelatedProducts";
 import { BiMinus, BiPlus } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const ProductDetails = (props) => {
   const product = data.products.find((x) => x._id === props.match.params.id);
 
-  // const onAdd = (product) => {
-  //   const exist = bagItem.find((x) => x.id === product.id);
-  //   if (exist) {
-  //     setbagItem(
-  //       bagItem.map((x) =>
-  //         x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
-  //       )
-  //     );
-  //   } else {
-  //     setbagItem([...bagItem, { ...product, qty: 1 }]);
-  //   }
-  // };
   return (
     <div>
       <div className="product__details__container">
@@ -43,7 +32,9 @@ const ProductDetails = (props) => {
           <div className="action__button__container">
             <button className="add_to_bag">Add to bag</button>
 
-            <button className="buy_now">Buy Now</button>
+            <Link to="/product/bagloaded">
+              <button className="buy_now">Buy Now</button>
+            </Link>
           </div>
         </div>
       </div>

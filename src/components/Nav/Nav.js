@@ -29,7 +29,9 @@ const Nav = (props) => {
                 <p>
                   <BiShoppingBag className="soko__bag__cart" />
                 </p>
-                <p>Bag</p>
+                <p>
+                  Bag <span className="bag__list">2</span>
+                </p>
               </div>
             </div>
           </Link>

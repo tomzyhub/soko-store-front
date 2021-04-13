@@ -16,7 +16,7 @@ const Furniture = (props) => {
             <h3>{product.name}</h3>
           </Link>
           <p>UGX {product.price}</p>
-          <button onClick={onAdd}>
+          <button onClick={() => onAdd(product)}>
             <BiPlus /> Add
           </button>
         </div>

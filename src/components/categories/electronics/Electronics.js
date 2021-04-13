@@ -1,18 +1,26 @@
 import React from "react";
-import blender from "../../../assets/img/blender.jpg";
 import "../electronics/electronics.css";
 import { BiPlus } from "react-icons/bi";
-const electronics = () => {
+import Data from "../../../ProductData/ElectronicsData";
+import { Link } from "react-router-dom";
+const electronics = (props) => {
+  const { onAdd } = props;
   return (
     <div>
-      <div className="product__container">
-        <img src={blender} alt="home fitted blender" />
-        <h3>Fitted Home blender</h3>
-        <p>UGX 185,000</p>
-        <button>
-          <BiPlus /> Add
-        </button>
-      </div>
+      {Data.products.map((product) => (
+        <div className="product__container" key={product._id}>
+          <Link to={`/product/${product._id}`}>
+            <img src={product.image} alt={product.name} />
+          </Link>
+          <Link to={`/product/${product._id}`}>
+            <h3>{product.name}</h3>
+          </Link>
+          <p>UGX {product.price}</p>
+          <button onClick={() => onAdd(product)}>
+            <BiPlus /> Add
+          </button>
+        </div>
+      ))}
     </div>
   );
 };

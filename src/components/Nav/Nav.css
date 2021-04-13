@@ -62,6 +62,7 @@ margin-right:5px;
 }
 
 .soko__bag__Container{
+    position:relative;
     display: flex;
     padding-top:0px;
     width:85px;
@@ -143,3 +144,17 @@ margin-right:5px;
     color:var(--primary-color);
 }
 /* nav B ends */
+
+.bag__list{
+    width: 25Px;
+    height:25px;
+position: absolute;
+top:-14px;
+left:10px;
+background-color:rgb(236, 77, 77);
+ color:var(--text-color-white);
+ margin-left:20px;
+ border-radius: 50%;
+ font-size:15px;
+ padding:3px;
+}

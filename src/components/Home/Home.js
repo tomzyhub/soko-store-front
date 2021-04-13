@@ -10,31 +10,45 @@ import Footer from "../footer/Footer";
 
 const Home = () => {
   const [Activepage, setActivepage] = useState("");
-  const [bagItem, setbagItem] = useState([1]);
+  const [bagItem, setbagItem] = useState([]);
 
   const onAdd = (product) => {
-    const exist = bagItem.find((x) => x.id === product.id);
+    const exist = bagItem.find((x) => x._id === product._id);
     if (exist) {
       setbagItem(
         bagItem.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+          x._id === product._id ? { ...exist, qty: exist.qty + 1 } : x
         )
       );
     } else {
       setbagItem([...bagItem, { ...product, qty: 1 }]);
     }
-    console.log("am hotreloading");
+    // console.log(exist);
+  };
+
+  const onRemove = (product) => {
+    const exist = bagItem.find((x) => x._id === product._id);
+    if (exist) {
+      setbagItem(
+        bagItem.map((x) =>
+          x._id === product._id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      );
+    } else {
+      setbagItem([...bagItem, { ...product, qty: 1 }]);
+    }
+    // console.log(exist);
   };
 
   let content = null;
   if (Activepage === "furniture") {
     content = <Furniture onAdd={onAdd} />;
   } else if (Activepage === "freshfood") {
-    content = <FreshFood />;
+    content = <FreshFood onAdd={onAdd} />;
   } else if (Activepage === "electronics") {
-    content = <Electronics />;
+    content = <Electronics onAdd={onAdd} />;
   } else if (Activepage === "all") {
-    content = <AllCategories />;
+    content = <AllCategories onAdd={onAdd} />;
   }
 
   useEffect(() => {
@@ -63,7 +77,7 @@ const Home = () => {
           {content}
         </div>
         <div className="bag__display">
-          <Bag bagItem={bagItem} />
+          <Bag bagItem={bagItem} onAdd={onAdd} onRemove={onRemove} />
         </div>
         <Footer />
       </div>

@@ -3,13 +3,15 @@ import "./App.css";
 import Home from "./components/Home/Home";
 import BagFull from "./components/bag-full/BagFull";
 import Nav from "./components/Nav/Nav";
-import { Route, Switch } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 import ProductDetails from "./components/Screen/ProductDetails";
 
 function App() {
   return (
     <div className="container">
-      <Nav />
+      <Nav>
+        <Link to="/furniture"> furniture </Link>
+      </Nav>
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/product/:id" exact component={ProductDetails} />

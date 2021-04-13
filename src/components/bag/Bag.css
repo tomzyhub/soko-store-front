@@ -1,0 +1,28 @@
+.bag__container{
+    text-align:center;
+    margin-top:20px;
+    font-size:1.25rem;
+    font-family: inherit;
+}
+
+.bag__container img{
+    width: 100px;
+    height:100px;
+}
+
+
+ .bag__header span{
+    display: inline-block;
+    width:30px;
+    text-align: center;
+    border-radius: 5px;
+    background-color:var(--primary-color);
+    color:white;
+
+}
+
+.bag__container p{
+    font-size:16px;
+    color:gray;
+    padding:5px;
+}

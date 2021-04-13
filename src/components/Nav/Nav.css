@@ -1,0 +1,145 @@
+@import url('../../gen.min.css');
+.Nav__header{
+    width:100%;
+    height:150px;
+    border-bottom:2px solid gray;
+}
+
+/* Nav A style */
+.sokoBage__container{
+    width: 100%;
+    height:50px;
+    padding-left:100px;
+    padding-top:10px;
+    background-color:var(--primary-color);
+    color:var(--text-color-white);
+}
+
+ .soko__bag__logo{
+    padding-top:2px;
+    font-size: 1em;
+} 
+
+.soko__nav{
+    display: flex;
+    justify-content:space-around;
+    padding:20px;
+}
+
+.soko__Nav__sideA{
+    width: 485px;
+    margin-top:-20px;
+ 
+   
+}
+
+.soko__Nav__sideA .store{
+font-size: 75px;
+padding-top:10px;
+padding-right:10px;
+color:gray;
+cursor:pointer;
+}
+
+.soko__Nav__sideA h3{
+    /* float:right; */
+   margin-left:85px;  
+   margin-top:-50px;
+ }
+.soko__Nav__sideA p{
+    margin-left:85px;
+    padding-left:5px;
+    padding-top:0px;
+
+}
+
+/* nav B start */
+.soko__Nav__sideB{
+display: flex;
+justify-content: space-around;
+width:30%;
+margin-right:5px;
+}
+
+.soko__bag__Container{
+    display: flex;
+    padding-top:0px;
+    width:85px;
+  
+}
+
+.soko__bag__Container .soko__bag__cart{
+   margin-left: 10px;
+   font-size:24px;
+   color:var(--text-color-gray);
+   cursor: pointer;
+}
+.soko__order__container{
+    display: flex;
+    padding-top:20px;
+    width:85px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    color:gray;
+    
+}
+.soko__account{
+    font-weight:bold;
+    font-size:1.3rem;
+    margin-top: -5px;
+
+}
+
+.soko__order__container p{
+    color:var(--text-color-gray);
+    padding-left:5px;
+   
+    
+ 
+}
+
+.wrapper-active{
+    display: flex;
+    align-items: center;
+    height:30px;
+    border-radius: 20px;
+    padding:5px;
+    width:130px;
+}
+.wrapper-active p{
+    /* margin-left: ; */
+    padding-left: 5px;
+    font-size: var(--fontSize);
+    font-weight: bold;
+   font-family: inherit;
+   color:var(--text-color-gray);
+    
+ }
+
+.soko__bag__cart .wrapper-active:hover{
+    color:var(--primary-color);
+}
+
+.link__B{
+    text-decoration:none;
+    text-decoration-color:none;
+    text-decoration-line: none;
+    height:40px;
+    padding-top:5px;
+    padding-left:-8px;
+    border-radius: 20px;
+    width:100px;
+    text-align: center;
+    color:var(--secondary-color)
+
+}
+.link__B:focus{
+    background-color:rgb(208, 215, 231);
+    color:var(--primary-color);
+}
+
+.link__B p:focus{
+    color:var(--primary-color);
+}
+/* nav B ends */

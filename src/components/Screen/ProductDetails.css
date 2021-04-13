@@ -1,0 +1,124 @@
+.product__details__container{
+    display: flex;
+    flex-direction:row;
+    margin-top:30px;
+    width:100%;
+    height: auto;
+}
+
+.product__image{
+    text-align: center;
+    width: 550px;
+    padding:5px;
+}
+
+.product__image img{
+    height:360px;
+    width:60%;
+    border-radius:4px;
+}
+
+.product__discription{
+    margin-left: 30px;
+    width: 650px;
+    padding:8px;
+}
+
+.product__name{
+font-size: 20px;
+font-family:inherit;
+font-weight: bold;
+color:var(--shade-black);
+padding-bottom:5px;
+}
+
+.product__desc{
+    font-size:16px;
+    color:gray;
+    font-family: inherit;
+    padding-bottom: 25px;
+}
+
+.product__price{
+    color:var(--shade-black);
+    font-size:18px;
+    font-weight:bold;
+    padding-bottom: 8px;
+
+}
+
+.product__price span{
+ background-color:rgb(236, 77, 77);
+ color:var(--text-color-white);
+ margin-left:20px;
+ border-radius: 4px;
+ font-size:15px;
+ padding:3px;
+}
+
+.slashed__price{
+    font-size:12px;
+    color:var(--text-color-gray);
+    padding-bottom:20px;
+    text-decoration: line-through;
+}
+
+.add__container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border:2px solid rgb(122, 179, 255);
+    height: 24px;
+    border-radius:4px;
+    width:65px;
+    margin-bottom:10px;
+ 
+}
+
+.add__container .btn-add{
+    width:18px;
+    font-size:20px;
+    background-color:rgb(208, 215, 231);
+    color:var(--primary-color);
+    cursor: pointer;
+    
+}
+
+.action__button__container{
+    display:flex;
+    justify-content: flex-start;
+    padding:5px;
+    width:400px;
+    margin-top:75px;
+}
+
+.action__button__container .add_to_bag{
+    width:150px;
+    height:35px;
+    border:2px solid var(--primary-color);
+    border-radius:5px;
+    font-size:17px;
+    color:var(--primary-color);
+    margin-right: 10px;
+    font-weight:bold;
+    background-color:var(--text-color-white);
+    outline: none;
+    cursor: pointer;
+}
+.buy_now{
+    width:150px;
+    height:35px;
+    border:none;
+    border-radius:5px;
+    font-size:17px;
+    color:var(--primary-color);
+    font-weight:bold;
+    background-color:var(--secondary-color); 
+    margin-left: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+.related__component{
+    margin-top: 80px;
+}

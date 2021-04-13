@@ -1,17 +1,25 @@
 import React from "react";
-import freshFruit from "../../../assets/img/fruits.jpg";
+import Data from "../../../ProductData/FreshFoodData";
 import { BiPlus } from "react-icons/bi";
-const FreshFood = () => {
+import { Link } from "react-router-dom";
+const FreshFood = (props) => {
+  const { onAdd } = props;
   return (
     <div>
-      <div className="product__container">
-        <img src={freshFruit} alt="fresh bananas" />
-        <h3>Fresh Banana</h3>
-        <p>UGX 24,000</p>
-        <button>
-          <BiPlus /> Add
-        </button>
-      </div>
+      {Data.products.map((product) => (
+        <div className="product__container" key={product._id}>
+          <Link to={`/product/${product._id}`}>
+            <img src={product.image} alt={product.name} />
+          </Link>
+          <Link to={`/product/${product._id}`}>
+            <h3>{product.name}</h3>
+          </Link>
+          <p>UGX {product.price}</p>
+          <button onClick={() => onAdd(product)}>
+            <BiPlus /> Add
+          </button>
+        </div>
+      ))}
     </div>
   );
 };

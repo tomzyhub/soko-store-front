@@ -1,7 +1,7 @@
 const data = {
   products: [
     {
-      _id: "1",
+      _id: "3",
       name: "Electric Industrial Steam Iron",
       category: "electronics",
       image:
@@ -11,7 +11,7 @@ const data = {
       description: " high-grade raw material and advanced technology",
     },
     {
-      _id: "2",
+      _id: "4",
       name: "Recording Microphone Kit ",
       category: "furniture",
       image:

@@ -5,11 +5,17 @@ import Emptybag from "../emptybag/Emptybag";
 
 const Bag = (props) => {
   const { bagItem, onAdd, onRemove } = props;
+
+  const Clear = () => {
+    console.log("cleared");
+  };
+
   return (
     <div>
       <h4 className="bag__header">
         Bag <span>{bagItem.length}</span>
       </h4>
+      <p onClick={Clear}>clear bag</p>
       <div className="bag__container">
         {bagItem.length === 0 ? (
           <Emptybag />

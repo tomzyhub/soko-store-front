@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 const ProductDetails = (props) => {
   const product = data.products.find((x) => x._id === props.match.params.id);
 
+  console.log(product);
   return (
     <div>
       <div className="product__details__container">

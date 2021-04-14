@@ -1,5 +1,5 @@
 import React from "react";
-import data from "../../ProductData/furnitureData";
+import data from "../../ProductData/AllData";
 import Footer from "../footer/Footer";
 import "../Screen/ProductDetails.css";
 import RelatedProducts from "../RelatedProducts/RelatedProducts";
@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 const ProductDetails = (props) => {
   const product = data.products.find((x) => x._id === props.match.params.id);
+  const { onAdd, onRemove } = props;
 
   console.log(product);
   return (
@@ -24,16 +25,19 @@ const ProductDetails = (props) => {
               UGX {product.price}{" "}
               <span>{product.price === "118,400" ? "-20%" : "-5%"}</span>
             </h3>
-            <p className="slashed__price">UGX {product.slashed}</p>
+            <p className="slashed__price"> {product.slashed}</p>
 
             <div className="add__container">
-              <BiMinus className="btn-add" />1<BiPlus className="btn-add" />
+              <BiMinus onClick={onRemove} className="btn-add" />1
+              <BiPlus onClick={onAdd} className="btn-add" />
             </div>
           </div>
           <div className="action__button__container">
-            <button className="add_to_bag">Add to bag</button>
+            <button onClick={onAdd} className="add_to_bag">
+              Add to bag
+            </button>
 
-            <Link to="/product/bagloaded">
+            <Link to="/bagfull">
               <button className="buy_now">Buy Now</button>
             </Link>
           </div>

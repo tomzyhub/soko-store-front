@@ -13,7 +13,7 @@ const data = {
     },
     {
       _id: "2",
-      name: "TIMELESS DRAWER BY ALF DAFRE",
+      name: "TIMELESS DRAWER ",
       category: "furniture",
       image:
         "https://www.urbansuite.co.uk/media/catalog/product/cache/1/thumbnail/400x/17f82f742ffe127f42dca9de82fb58b1/t/i/timeless-dresser-by-alf-dafre.png",

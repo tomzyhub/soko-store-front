@@ -14,3 +14,26 @@
    cursor:pointer;
    text-decoration: none;
 }
+
+.setup___container{
+    display: grid;
+    grid-template-columns:2fr 1fr;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    ;
+}
+.account__setup{
+  position: relative;
+    border-right:1px solid gray;
+    height: 100%;
+}
+
+.bag__side{
+  border:1px solid #2243
+}
+  
+  
+  

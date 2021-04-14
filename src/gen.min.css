@@ -9,7 +9,8 @@
     --text-color-gray:gray;
     --shade-black:#333;
     --fontSize:16px;
-    
+    --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
 }
 *{
     box-sizing:border-box;

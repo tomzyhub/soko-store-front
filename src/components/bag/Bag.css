@@ -1,4 +1,5 @@
 .bag__container{
+    position: relative;
     text-align:center;
     margin-top:20px;
     font-size:1.25rem;
@@ -22,10 +23,10 @@
 }
 
 .bag__container {
-  
     font-size:16px;
     color:gray;
     padding:5px;
+  
 }
 
 .add__container > p{
@@ -34,10 +35,10 @@
 
 .item__container{
     display:inline-flex;
-    width: 100%;
+    width: 350px;
     height:130px;
     padding:10px;
-    margin-top:15px;
+    top:6px; 
 }
 
 .bag__item__name{
@@ -54,7 +55,7 @@
 
 .item_per_price{
     font-size:12px;
-    width: 100%;
+    width: 100px;
     float:inline-end;
     height:40px;
     font-family: inherit;
@@ -125,4 +126,12 @@ left:2px;
 .conclusion{
     color:rgb(10, 207, 10);
     font-weight:bold;
+}
+
+.clearbg{
+    float: right;
+    color:gray;
+    margin-right:30px;
+    border-bottom:1px solid gray;
+    cursor: pointer;
 }

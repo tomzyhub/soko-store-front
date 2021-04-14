@@ -4,18 +4,21 @@ import "../bag/Bag.css";
 import Emptybag from "../emptybag/Emptybag";
 
 const Bag = (props) => {
-  const { bagItem, onAdd, onRemove } = props;
-
-  const Clear = () => {
-    console.log("cleared");
-  };
+  const { bagItem, onAdd, onRemove, Clear } = props;
 
   return (
     <div>
       <h4 className="bag__header">
         Bag <span>{bagItem.length}</span>
       </h4>
-      <p onClick={Clear}>clear bag</p>
+      {bagItem.length === 0 ? (
+        ""
+      ) : (
+        <p onClick={Clear} className="clearbg">
+          clear bag
+        </p>
+      )}
+
       <div className="bag__container">
         {bagItem.length === 0 ? (
           <Emptybag />
@@ -27,7 +30,7 @@ const Bag = (props) => {
                   <h2 className="bag__item__name">{item.name}</h2>
                   <p className="item_per_price">per piece</p>
                   <h3 className="item__price">UGX{item.price}</h3>
-                  <p className="item__slashed">{item.slashed}</p>
+                  <p className="item__slashed">UGX{item.slashed}</p>
                 </div>
                 <div className="add__container">
                   <BiMinus onClick={() => onRemove(item)} className="btn-add" />

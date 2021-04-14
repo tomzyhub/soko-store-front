@@ -8,38 +8,12 @@ import "../Home/Home.css";
 import AllCategories from "../categories/All-category/AllCategories";
 import Footer from "../footer/Footer";
 
-const Home = () => {
+const Home = (props) => {
   const [Activepage, setActivepage] = useState("");
-  const [bagItem, setbagItem] = useState([]);
+  const { onAdd, bagItem, onRemove, Clear } = props;
 
-  const onAdd = (product) => {
-    const exist = bagItem.find((x) => x._id === product._id);
-    if (exist) {
-      setbagItem(
-        bagItem.map((x) =>
-          x._id === product._id ? { ...exist, qty: exist.qty + 1 } : x
-        )
-      );
-    } else {
-      setbagItem([...bagItem, { ...product, qty: 1 }]);
-    }
-    // console.log(exist);
-  };
-
-  const onRemove = (product) => {
-    const exist = bagItem.find((x) => x._id === product._id);
-    if (exist) {
-      setbagItem(
-        bagItem.map((x) =>
-          x._id === product._id ? { ...exist, qty: exist.qty - 1 } : x
-        )
-      );
-    } else {
-      setbagItem([...bagItem, { ...product, qty: 1 }]);
-    }
-    // console.log(exist);
-  };
-
+  // rendering different components dynamically
+  // on button click, and the state updates with new component
   let content = null;
   if (Activepage === "furniture") {
     content = <Furniture onAdd={onAdd} />;
@@ -77,7 +51,12 @@ const Home = () => {
           {content}
         </div>
         <div className="bag__display">
-          <Bag bagItem={bagItem} onAdd={onAdd} onRemove={onRemove} />
+          <Bag
+            bagItem={bagItem}
+            onAdd={onAdd}
+            onRemove={onRemove}
+            Clear={Clear}
+          />
         </div>
         <Footer />
       </div>

@@ -12,7 +12,7 @@ const data = {
     },
     {
       _id: "6",
-      name: "fresh Shrimp",
+      name: "Fresh Shrimp",
       category: "FreshFood",
       image:
         "https://static-s3.supermart.ng/productImage/spwxyz598_fresh_shrimps_1_kg.jpg",

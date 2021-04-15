@@ -42,7 +42,7 @@
 }
 
 .bag__item__name{
-    font-size:12px;
+    font-size:14px;
     padding-left:2px;
     color:var(--text-color-black);
     font-family: inherit;

@@ -16,7 +16,10 @@ const BagFull = (props) => {
           </div>
         ) : (
           <div className="setup___container">
-            <div className="account__setup">Hello</div>
+            <div className="account__setup">
+              <h2>this page is under Development</h2>
+              <h3> comeback again 👍</h3>
+            </div>
             <div className="bag_side">
               <Bag
                 bagItem={bagItem}

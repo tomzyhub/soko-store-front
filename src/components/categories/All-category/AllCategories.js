@@ -6,7 +6,6 @@ const AllCategories = (props) => {
   const { onAdd } = props;
   return (
     <div>
-      <h3>all..</h3>
       <Electronics onAdd={onAdd} />
       <Furniture onAdd={onAdd} />
       <FreshFood onAdd={onAdd} />
